@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7AC258B0155BCFAB931B065 /* Pods_BMPClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FECBE85E93F9ACF6EE9E8A /* Pods_BMPClient.framework */; };
 		D3479F5C204888A800FB2F4D /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3479F57204888A700FB2F4D /* APIs.swift */; };
 		D3479F5D204888A800FB2F4D /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3479F58204888A700FB2F4D /* AlamofireImplementations.swift */; };
 		D3479F5E204888A800FB2F4D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3479F59204888A800FB2F4D /* Models.swift */; };
@@ -46,6 +47,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02C8009663428B08BD45520B /* Pods-BMPClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMPClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-BMPClient/Pods-BMPClient.release.xcconfig"; sourceTree = "<group>"; };
+		32FECBE85E93F9ACF6EE9E8A /* Pods_BMPClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMPClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B65C3F79A4A7F9078B9F23 /* Pods-BMPClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMPClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BMPClient/Pods-BMPClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D3479F3F2048884200FB2F4D /* BMPClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMPClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3479F4E2048884200FB2F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3479F56204888A700FB2F4D /* BMPClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BMPClient-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -92,17 +96,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7AC258B0155BCFAB931B065 /* Pods_BMPClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29EA5961B9702B3D2722E1A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37B65C3F79A4A7F9078B9F23 /* Pods-BMPClient.debug.xcconfig */,
+				02C8009663428B08BD45520B /* Pods-BMPClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A90655B769331697A4C19D92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32FECBE85E93F9ACF6EE9E8A /* Pods_BMPClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3479F362048884200FB2F4D = {
 			isa = PBXGroup;
 			children = (
 				D3479F412048884200FB2F4D /* BMPClient */,
 				D3479F402048884200FB2F4D /* Products */,
+				29EA5961B9702B3D2722E1A1 /* Pods */,
+				A90655B769331697A4C19D92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3479F512048884200FB2F4D /* Build configuration list for PBXNativeTarget "BMPClient" */;
 			buildPhases = (
+				74B53BAE5115B11FDFBBC38A /* [CP] Check Pods Manifest.lock */,
 				D3479F3B2048884200FB2F4D /* Sources */,
 				D3479F3C2048884200FB2F4D /* Frameworks */,
 				D3479F3D2048884200FB2F4D /* Resources */,
+				8D28C80B01146BC69EB95302 /* [CP] Embed Pods Frameworks */,
+				B6F4BD4C45C2C6219C50C928 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +266,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74B53BAE5115B11FDFBBC38A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BMPClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D28C80B01146BC69EB95302 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BMPClient/Pods-BMPClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMPClient/Pods-BMPClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F4BD4C45C2C6219C50C928 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BMPClient/Pods-BMPClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3479F3B2048884200FB2F4D /* Sources */ = {
@@ -396,6 +477,7 @@
 		};
 		D3479F522048884200FB2F4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37B65C3F79A4A7F9078B9F23 /* Pods-BMPClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -414,6 +496,7 @@
 		};
 		D3479F532048884200FB2F4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02C8009663428B08BD45520B /* Pods-BMPClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
