@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3479F4A2048884200FB2F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3479F492048884200FB2F4D /* Assets.xcassets */; };
 		D3479F5C204888A800FB2F4D /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3479F57204888A700FB2F4D /* APIs.swift */; };
 		D3479F5D204888A800FB2F4D /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3479F58204888A700FB2F4D /* AlamofireImplementations.swift */; };
 		D3479F5E204888A800FB2F4D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3479F59204888A800FB2F4D /* Models.swift */; };
@@ -48,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		D3479F3F2048884200FB2F4D /* BMPClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMPClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3479F492048884200FB2F4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3479F4E2048884200FB2F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3479F56204888A700FB2F4D /* BMPClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BMPClient-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3479F57204888A700FB2F4D /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				D3479F59204888A800FB2F4D /* Models.swift */,
 				D3479F552048886300FB2F4D /* Models */,
 				D3479F542048885C00FB2F4D /* APIs */,
-				D3479F492048884200FB2F4D /* Assets.xcassets */,
 				D3479F4E2048884200FB2F4D /* Info.plist */,
 				D3479F56204888A700FB2F4D /* BMPClient-Bridging-Header.h */,
 			);
@@ -238,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3479F4A2048884200FB2F4D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
